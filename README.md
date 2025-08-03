@@ -45,7 +45,7 @@ The model uses a simple CNN with three convolutional layers and data augmentatio
 
 ## 📈 Evaluation
 
-- **Test Accuracy:** **87.67%**
+- **Test Accuracy:** **82.67%**
 - **Evaluation Metrics:**
   - Accuracy on test set
   - Confusion Matrix
@@ -70,17 +70,5 @@ The model’s predictions were evaluated using a confusion matrix:
 
 
 
-```python
-from tensorflow.keras.preprocessing import image
-import tensorflow as tf
 
-img = image.load_img("your_image.jpg", target_size=(128, 128))
-img_array = tf.expand_dims(image.img_to_array(img), 0) / 255.0
-prediction = model.predict(img_array)
-
-if prediction >= 0.5:
-    print("Dog")
-else:
-    print("Cat")
-```
 
