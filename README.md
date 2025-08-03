@@ -54,7 +54,7 @@ The model uses a simple CNN with three convolutional layers and data augmentatio
 
 The model’s predictions were evaluated using a confusion matrix:
 
-![Confusion Matrix](assets/confusion_matrix.png)
+![Confusion Matrix](confusion_matrix.png)
 
 - **True Positives:** Dogs correctly predicted  
 - **True Negatives:** Cats correctly predicted  
@@ -65,7 +65,10 @@ The model’s predictions were evaluated using a confusion matrix:
 
 ## 🧪 Predicting Custom Images
 
-You can upload any `.jpg` image of a cat or dog and test the trained model:
+### 🐱 Example: Predicting on a Cat Image  
+![Cat Prediction](https://github.com/AdvikaTijare10/catsVSdogs/blob/main/cat_test.png)
+
+
 
 ```python
 from tensorflow.keras.preprocessing import image
