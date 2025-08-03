@@ -1,0 +1,82 @@
+# 🧠 Reflections & Learnings from My First CNN Project
+
+This was my **first ever CNN project**, and I absolutely enjoyed building it!  
+It was both challenging and exciting to see how a machine learning model could distinguish between images of cats and dogs. I used TensorFlow and Keras in Google Colab, and explored many important deep learning concepts hands-on for the first time.
+
+Here are some of the most valuable things I learned during this journey:
+
+---
+
+## 🔁 1. Overfitting & Regularization
+
+At first, I thought that **increasing the number of layers and filters** would improve my model. It did — *but only on the training set*. My validation accuracy didn’t improve much, and validation loss started increasing, indicating **overfitting**.
+
+To reduce overfitting, I learned and applied:
+- **Dropout**: Randomly turns off neurons during training to prevent dependency on specific features.
+- **EarlyStopping**: Automatically stops training when the model stops improving on the validation set.
+- **Data Augmentation**: Introduced more variation in training data (like flips, rotations, zoom), which helped generalize the model better.
+
+---
+
+## 📊 2. Validation vs Training Accuracy and Loss
+
+- **Training Accuracy/Loss** tells how well the model fits the training data.
+- **Validation Accuracy/Loss** shows how well the model performs on **unseen** data during training.
+
+🔍 I observed that:
+- When validation accuracy is much lower than training accuracy, it usually means the model is **overfitting**.
+- When both are low, the model is likely **underfitting** (not learning enough).
+- When validation loss starts increasing but training loss decreases, it's a warning sign of overfitting.
+
+---
+
+## ⚖️ 3. Overfitting vs Underfitting
+
+**Overfitting** happens when the model memorizes the training data and doesn’t generalize well.  
+**Underfitting** means the model is too simple or hasn’t learned enough from the data.
+
+| Overfitting | Underfitting |
+|-------------|--------------|
+| High train accuracy, low val accuracy | Low train and val accuracy |
+| Model is too complex | Model is too simple |
+| Fix: Regularization, more data | Fix: More layers, better training |
+
+Understanding this balance was key to building a reliable model.
+
+---
+
+## 🔄 4. What Happens in One Epoch?
+
+One **epoch** is when the model has seen **all the training data once**.
+
+In one epoch:
+- Data is split into **batches**
+- The model:
+  - Makes predictions on each batch
+  - Calculates loss
+  - Updates weights using backpropagation
+- After all batches are processed, it's considered **one epoch complete**
+
+Usually, training takes multiple epochs for the model to gradually improve.
+
+---
+
+## 🧪 5. Validation Set vs Test Set
+
+| Validation Set | Test Set |
+|----------------|----------|
+| Used during training | Used only after training is complete |
+| Helps tune model & hyperparameters | Evaluates final model performance |
+| Seen by the model (indirectly) | **Never seen** by the model before |
+
+🔑 I used a **validation split** during training (20% of data) and evaluated final accuracy using a **separate test set**.
+
+---
+
+## ❤️ Final Thoughts
+
+This project really helped me understand the core ideas of deep learning — not just by reading, but by *seeing* the impact of different techniques in action. From watching the model learn to identifying overfitting, it was a super rewarding experience.
+
+I’m excited to take on more CNN projects next — maybe even go into satellite or telescope image classification next! 📡🛰️
+
+---
